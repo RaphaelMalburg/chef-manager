@@ -1,0 +1,23 @@
+{
+  "Version": 1,
+  "Hash": "D/rKOkscuW3nYmLVG56bvoX2XCtZMt6/mXEX3/AXJss=",
+  "Source": "ChefManager.Server",
+  "BasePath": "_content/ChefManager.Server",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [
+    {
+      "Identity": "C:\\Users\\USER\\source\\repos\\ChefManager\\chefmanager.client\\chefmanager.client.esproj",
+      "Version": 2,
+      "Source": "chefmanager.client",
+      "GetPublishAssetsTargets": "GetCurrentProjectPublishStaticWebAssetItems",
+      "AdditionalPublishProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier;SelfContained",
+      "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
+      "AdditionalBuildProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier;SelfContained"
+    }
+  ],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
