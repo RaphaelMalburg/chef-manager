@@ -28,9 +28,26 @@ namespace ChefManager.Server.Data
            .HasKey(u => u.Id);
             modelBuilder.Entity<AppUser>()
                 .Property(u => u.Id)
-                .ValueGeneratedOnAdd(); // Auto-increment id for users
-            
-       
+                .ValueGeneratedOnAdd(); // Auto-increment id for users 
+            modelBuilder.Entity<AppUser>()
+                .Property(u => u.FirstName)
+                .HasMaxLength(50)
+                .IsRequired();
+            modelBuilder.Entity<AppUser>()
+                .Property(u => u.LastName)
+                .HasMaxLength(50)
+                .IsRequired();
+            modelBuilder.Entity<AppUser>()
+                .Property(u => u.CompanyName)
+                .HasMaxLength(50)
+                .IsRequired();
+            modelBuilder.Entity<AppUser>()
+                .Property(u => u.IsActive)
+                .IsRequired();
+            modelBuilder.Entity<AppUser>()
+                .Property(u => u.InternalPassword)
+                .HasMaxLength(50)
+                .IsRequired();
 
         }
 

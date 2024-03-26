@@ -1,8 +1,10 @@
 
 import { useNavigate } from "react-router-dom";
+import UserDTO from "../DTOs/UserDTO";
+import useAuthStore from "../store/useAuthStore";
 
 function LogoutLink(props: { children: React.ReactNode }) {
-
+    const setUserAsync = useAuthStore((state) => state.setUserAsync);
     const navigate = useNavigate();
 
 
@@ -18,8 +20,9 @@ function LogoutLink(props: { children: React.ReactNode }) {
         })
             .then((data) => {
                 if (data.ok) {
+                    setUserAsync({ email: "", name: "", companyName: "", isActive: true } as UserDTO); // TODO: Update with actual user data from server response)
 
-                    navigate("/login");
+                    {/*       navigate("/login");*/ }
                 }
               
 

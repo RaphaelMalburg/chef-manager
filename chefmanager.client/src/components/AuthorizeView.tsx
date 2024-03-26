@@ -13,7 +13,7 @@ function AuthorizeView(props: { children: React.ReactNode }) {
 
     const [authorized, setAuthorized] = useState<boolean>(false);
     const [loading, setLoading] = useState<boolean>(true); // add a loading state
-    let emptyuser: User = { email: "" };
+    const emptyuser: User = { email: "" };
 
     const [user, setUser] = useState(emptyuser);
 
@@ -21,8 +21,8 @@ function AuthorizeView(props: { children: React.ReactNode }) {
     useEffect(() => {
         // Get the cookie value
         let retryCount = 0; // initialize the retry count
-        let maxRetries = 10; // set the maximum nugger of retries
-        let delay: number = 1000; // set the delay in milliseconds
+        const maxRetries = 10; // set the maximum nugger of retries
+        const delay: number = 1000; // set the delay in milliseconds
 
         // define a delay function that returns a promise
         function wait(delay: number) {
@@ -30,15 +30,17 @@ function AuthorizeView(props: { children: React.ReactNode }) {
         }
 
         // define a fetch function that retries until status 200 or 401
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         async function fetchWithRetry(url: string, options: any) {
             try {
                 // make the fetch request
-                let response = await fetch(url, options);
+                const response = await fetch(url, options);
 
                 // check the status code
                 if (response.status == 200) {
                     console.log("Authorized");
-                    let j: any = await response.json();
+                    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                    const j: any = await response.json();
                     setUser({ email: j.email });
                     setAuthorized(true);
                     return response; // return the response
@@ -105,6 +107,7 @@ function AuthorizeView(props: { children: React.ReactNode }) {
 
 export function AuthorizedUser(props: { value: string }) {
     // Consume the username from the UserContext
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const user: any = React.useContext(UserContext);
 
     // Display the username in a h1 tag

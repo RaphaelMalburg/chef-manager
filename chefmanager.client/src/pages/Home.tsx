@@ -1,15 +1,17 @@
 import AuthorizeView, { AuthorizedUser } from "../components/AuthorizeView";
+import Hero from "../components/Hero";
 import LogoutLink from "../components/LogoutLink";
-import WeatherForecast from "../components/WeatherForecast";
 
 
 function Home() {
   return (
-
-      <AuthorizeView>
+      /**      <AuthorizeView>
           <span><LogoutLink>Logout <AuthorizedUser value="email" /></LogoutLink></span>
-          <WeatherForecast />
-      </AuthorizeView>
+    
+      </AuthorizeView> */
+      <>
+          <Hero />
+      </>
   );
 }
 

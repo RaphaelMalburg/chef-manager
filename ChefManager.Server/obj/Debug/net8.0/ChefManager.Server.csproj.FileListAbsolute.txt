@@ -131,3 +131,4 @@ C:\Users\USER\source\repos\ChefManager\ChefManager.Server\bin\Debug\net8.0\Micro
 C:\Users\USER\source\repos\ChefManager\ChefManager.Server\bin\Debug\net8.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
 C:\Users\USER\source\repos\ChefManager\ChefManager.Server\bin\Debug\net8.0\Newtonsoft.Json.Bson.dll
 C:\Users\USER\source\repos\ChefManager\ChefManager.Server\bin\Debug\net8.0\Swashbuckle.AspNetCore.Annotations.dll
+C:\Users\USER\source\repos\ChefManager\ChefManager.Server\obj\Debug\net8.0\ChefManager.Server.sourcelink.json
